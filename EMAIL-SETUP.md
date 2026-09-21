@@ -163,8 +163,8 @@ npx wrangler tail            # логи: приём писем, ошибки о�
 | Ответ обоих адресов | ✅ HTTP 302 → страница входа Cloudflare Access |
 | Вход | кнопка **Sign in with Cloudflare** (политика = участники аккаунта), сессия 168 ч |
 | Онбординг Email Sending по доменам | ⏳ вручную в дашборде: `Compute → Email Service → Email Sending → Onboard Domain` (публичного API нет, DKIM-ключ генерирует Cloudflare) |
-| Переключение приёма на воркер | ⏳ после создания ящиков (иначе письма игнорируются: `mailbox does not exist`) |
-| Ящики `info@` | ⏳ создать в интерфейсе после входа |
+| Переключение приёма на воркер | ✅ `info@` и catch-all → `worker:helixworks-mail` во всех пяти доменах, пересылка на Gmail отключена (бэкап правил — `sites/.lh/email-routing-backup-*.json`) |
+| Ящики `info@` | ✅ созданы (объекты в R2 `mailboxes/<адрес>.json`, имена заданы) |
 
 ## Права токена Cloudflare для автоматизации
 
