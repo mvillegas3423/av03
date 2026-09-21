@@ -201,3 +201,10 @@ pnpm scenes     # перерисовать иллюстрации public/scenes/
 pnpm hero       # перегенерация public/hero.jpg
 pnpm og         # перегенерация public/og.jpg
 ```
+
+## Почта
+
+Домен `goldeneramotors.site` обслуживается общим воркером `helixworks-mail`: приём через Cloudflare
+Email Routing, веб-интерфейс почты, отправка через Cloudflare Email Service (DKIM домена).
+Адрес — `info@goldeneramotors.site`. Полная инструкция по развёртыванию, проверке и типовым сбоям:
+[`EMAIL-SETUP.md`](./EMAIL-SETUP.md).

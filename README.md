@@ -98,3 +98,10 @@ pnpm og         # превью для соцсетей
 | Node version (env) | `22` (при необходимости) |
 
 Пуш в `main` → Cloudflare деплоит сам.
+
+## Почта
+
+Домен `goldeneramotors.site` обслуживается общим воркером `helixworks-mail`: приём через Cloudflare
+Email Routing, веб-интерфейс почты, отправка через Cloudflare Email Service (DKIM домена).
+Адрес — `info@goldeneramotors.site`. Полная инструкция по развёртыванию, проверке и типовым сбоям:
+[`EMAIL-SETUP.md`](./EMAIL-SETUP.md).
