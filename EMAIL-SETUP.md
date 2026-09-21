@@ -30,7 +30,7 @@
 |---|---|
 | Воркер | `helixworks-mail` (код — `sites/mail`, клон [cloudflare/agentic-inbox](https://github.com/cloudflare/agentic-inbox)) |
 | Технический адрес | `https://helixworks-mail.mvillegas3423.workers.dev` |
-| Красивый адрес | `mail.helixworks.site` — **планируется** (привязка к воркеру) |
+| Красивый адрес | **https://mail.helixworks.site** — привязан |
 | R2-бакет | `agentic-inbox` (вложения) |
 | Ящики (адреса) | см. `EMAIL_ADDRESSES` в `sites/mail/wrangler.jsonc` |
 | Домены аккаунта | goldeneramotors.site, redlinemotors.site, goldeneramotors.site, auto-master.site, helixworks.site |
@@ -149,3 +149,44 @@ npx wrangler tail            # логи: приём писем, ошибки о�
 3. В правилах зоны нового домена: `info@` и catch-all → `Send to a Worker` → `helixworks-mail`.
 4. Онбордить домен в Email Sending (иначе отправка с него не пойдёт: ошибка `E_SENDER_DOMAIN_NOT_AVAILABLE`).
 5. Создать ящик в веб-интерфейсе.
+
+## 10. Текущий статус (проверено)
+
+| Шаг | Состояние |
+|---|---|
+| Воркер развёрнут | ✅ `helixworks-mail` |
+| Access включён | ✅ приложение «helixworks-mail - Cloudflare Workers», политика «Cloudflare account members» (войти может только владелец аккаунта) |
+| `POLICY_AUD` / `TEAM_DOMAIN` | ✅ заданы как секреты воркера (автоподстановку дашборда перезаписали вручную — иначе `Invalid or expired Access token`) |
+| Team domain | `https://steep-fire-b41b.cloudflareaccess.com` |
+| AUD (Application Audience Tag) | `fdd0cc900be7a24132a32213322cc4db15cc17400e8eafe22b287b35927bb998` |
+| Красивый адрес | ✅ `https://mail.helixworks.site` — DNS CNAME + Worker-route `mail.helixworks.site/*` (Custom Domains API токену недоступен, сделано через DNS+route) |
+| Ответ обоих адресов | ✅ HTTP 302 → страница входа Cloudflare Access |
+| Вход | кнопка **Sign in with Cloudflare** (политика = участники аккаунта), сессия 168 ч |
+| Онбординг Email Sending по доменам | ⏳ вручную в дашборде: `Compute → Email Service → Email Sending → Onboard Domain` (публичного API нет, DKIM-ключ генерирует Cloudflare) |
+| Переключение приёма на воркер | ⏳ после создания ящиков (иначе письма игнорируются: `mailbox does not exist`) |
+| Ящики `info@` | ⏳ создать в интерфейсе после входа |
+
+## Права токена Cloudflare для автоматизации
+
+Чтобы ИИ настроил почту и поддомены без участия владельца, токену нужны права:
+
+| Право | Уровень | Зачем |
+|---|---|---|
+| Workers Scripts → Edit | Account | деплой воркера и секретов |
+| Workers R2 Storage → Edit | Account | бакет для вложений |
+| Workers Custom Domains → Edit | Account | привязка `mail.<домен>` (без него — обход через DNS + route) |
+| Zone → Zone → Read | Zone | перечислить зоны |
+| Zone → DNS → Edit | Zone | поддомен, MX/SPF/DKIM/DMARC |
+| Zone → Workers Routes → Edit | Zone | Worker-route для поддомена |
+| Zone → Email Routing Rules → Edit | Zone | правила приёма: `info@` и catch-all → воркер |
+| Account → Email Routing Addresses → Edit | Account | адреса-получатели пересылки |
+| Account → Access: Apps and Policies → Edit | Account | читать Access-приложение и **AUD** (нужен для `POLICY_AUD`) |
+| Account → Access: Organizations, Identity Providers, Groups → Edit | Account | Zero Trust организация и **team domain** (для `TEAM_DOMAIN`) |
+| Billing → Read | Account | проверить активный Workers Paid |
+
+Остальное (онбординг **Email Sending** по домену и подтверждение тарифа) делается только руками
+в дашборде — публичного API для этого нет.
+
+Полная матрица прав, порядок автоматизации, команды проверки и разбор реальных ошибок
+(`405` на Custom Domains, `403` на настройках Email Routing, неверная автоподстановка секретов
+Access): **`sites/mail/CLOUDFLARE-SETUP.md`**.
