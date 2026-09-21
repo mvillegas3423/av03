@@ -155,13 +155,13 @@ npx wrangler tail            # логи: приём писем, ошибки о�
 | Шаг | Состояние |
 |---|---|
 | Воркер развёрнут | ✅ `helixworks-mail` |
-| Access включён | ✅ приложение «helixworks-mail - Cloudflare Workers», политика «Cloudflare account members» (войти может только владелец аккаунта) |
-| `POLICY_AUD` / `TEAM_DOMAIN` | ✅ заданы как секреты воркера (автоподстановку дашборда перезаписали вручную — иначе `Invalid or expired Access token`) |
+| Вход в вебмейл | ✅ **по паролю**: форма на `/login`, сессия в подписанной cookie на 30 дней. Cloudflare Access снят — email-коды и подтверждения не нужны |
+| Секреты воркера | `AUTH_PASSWORD` (пароль входа) и `SESSION_SECRET` (подпись cookie). Пароль хранится в `sites/.secrets.alt.local` |
 | Team domain | `https://steep-fire-b41b.cloudflareaccess.com` |
 | AUD (Application Audience Tag) | `fdd0cc900be7a24132a32213322cc4db15cc17400e8eafe22b287b35927bb998` |
 | Красивый адрес | ✅ `https://mail.helixworks.site` — DNS CNAME + Worker-route `mail.helixworks.site/*` (Custom Domains API токену недоступен, сделано через DNS+route) |
 | Ответ обоих адресов | ✅ HTTP 302 → страница входа Cloudflare Access |
-| Вход | кнопка **Sign in with Cloudflare** (политика = участники аккаунта), сессия 168 ч |
+| Как поменять пароль | записать секрет через API (`PUT .../workers/scripts/helixworks-mail/secrets`) — через stdin wrangler добавляет перевод строки и пароль ломается |
 | Онбординг Email Sending по доменам | ⏳ вручную в дашборде: `Compute → Email Service → Email Sending → Onboard Domain` (публичного API нет, DKIM-ключ генерирует Cloudflare) |
 | Переключение приёма на воркер | ✅ `info@` и catch-all → `worker:helixworks-mail` во всех пяти доменах, пересылка на Gmail отключена (бэкап правил — `sites/.lh/email-routing-backup-*.json`) |
 | Ящики `info@` | ✅ созданы (объекты в R2 `mailboxes/<адрес>.json`, имена заданы) |
