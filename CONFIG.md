@@ -21,8 +21,8 @@
 | `monogram` | Буква в лого | `'G'` |
 | `tagline` | Слоган | `'American classics · Sales & restoration'` |
 | `description` | Дефолтное meta description | `'Classic American car sales, restoration and service…'` |
-| `phone` | Отображаемый номер | `'+1 (313) 555-0197'` |
-| `phoneHref` | Ссылка `tel:` (только цифры) | `'tel:+13135550197'` |
+| `phone` | Отображаемый номер | `'+1 (231) 371-0656'` |
+| `phoneHref` | Ссылка `tel:` (только цифры) | `'tel:+12313710656'` |
 | `email` | Email | `'info@goldeneramotors.site'` |
 | `address` | Адрес | `'3400 Michigan Avenue, Detroit, MI'` |
 | `hours` | Часы работы | `'Mon–Sat · 9:00–18:00'` |

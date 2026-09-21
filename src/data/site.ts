@@ -7,8 +7,8 @@ export const site = {
   tagline: 'American classics · Sales & restoration',
   description:
     'Classic American car sales, restoration and service. Hand-picked vintage vehicles with documented history and concours-level workmanship.',
-  phone: '+1 (313) 555-0197',
-  phoneHref: 'tel:+13135550197',
+  phone: '+1 (231) 371-0656',
+  phoneHref: 'tel:+12313710656',
   email: 'info@goldeneramotors.site',
   address: '3400 Michigan Avenue, Detroit, MI',
   hours: 'Mon–Sat · 9:00–18:00',
