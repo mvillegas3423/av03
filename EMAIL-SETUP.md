@@ -157,14 +157,17 @@ npx wrangler tail            # логи: приём писем, ошибки о�
 | Воркер развёрнут | ✅ `helixworks-mail` |
 | Вход в вебмейл | ✅ **по паролю**: форма на `/login`, сессия в подписанной cookie на 30 дней. Cloudflare Access снят — email-коды и подтверждения не нужны |
 | Секреты воркера | `AUTH_PASSWORD` (пароль входа) и `SESSION_SECRET` (подпись cookie). Пароль хранится в `sites/.secrets.alt.local` |
-| Team domain | `https://steep-fire-b41b.cloudflareaccess.com` |
-| AUD (Application Audience Tag) | `fdd0cc900be7a24132a32213322cc4db15cc17400e8eafe22b287b35927bb998` |
+| Team domain *(историческое)* | `https://steep-fire-b41b.cloudflareaccess.com` — Access снят, значение нужно только при возврате к нему |
+| AUD *(историческое)* | `fdd0cc900be7a24132a32213322cc4db15cc17400e8eafe22b287b35927bb998` — Access снят |
 | Красивый адрес | ✅ `https://mail.helixworks.site` — DNS CNAME + Worker-route `mail.helixworks.site/*` (Custom Domains API токену недоступен, сделано через DNS+route) |
-| Ответ обоих адресов | ✅ HTTP 302 → страница входа Cloudflare Access |
+| Ответ обоих адресов | ✅ HTTP 303 → наша страница входа `/login` (проверено вживую) |
 | Как поменять пароль | записать секрет через API (`PUT .../workers/scripts/helixworks-mail/secrets`) — через stdin wrangler добавляет перевод строки и пароль ломается |
-| Онбординг Email Sending по доменам | ⏳ вручную в дашборде: `Compute → Email Service → Email Sending → Onboard Domain` (публичного API нет, DKIM-ключ генерирует Cloudflare) |
+| Онбординг Email Sending по доменам | ✅ **выполнен для всех пяти**: в DNS появились `cf-bounce` MX (3 записи), `cf-bounce._domainkey` TXT и `_dmarc` (`p=reject`). Публичного API нет — только дашборд |
 | Переключение приёма на воркер | ✅ `info@` и catch-all → `worker:helixworks-mail` во всех пяти доменах, пересылка на Gmail отключена (бэкап правил — `sites/.lh/email-routing-backup-*.json`) |
-| Ящики `info@` | ✅ созданы (объекты в R2 `mailboxes/<адрес>.json`, имена заданы) |
+| Ящики `info@` | ✅ созданы (объекты в R2 `mailboxes/<адрес>.json` **без BOM**, имена заданы) |
+| Доставляемость | ✅ **mail-tester 10/10**; сквозные тесты пройдены: письмо внутрь домена, письмо наружу, ответ с того же домена, отбой для чужого адреса |
+| Отправитель | ✅ домен письма всегда равен домену ящика; в форме строка `From` только показывает адрес, выбора нет |
+| Отказы (bounces) | Cloudflare ведёт suppression list автоматически; уведомление об отказе приходит на адрес отправителя (то есть в тот же ящик) |
 
 ## Права токена Cloudflare для автоматизации
 
