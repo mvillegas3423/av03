@@ -33,7 +33,7 @@
 | Красивый адрес | **https://mail.helixworks.site** — привязан |
 | R2-бакет | `agentic-inbox` (вложения) |
 | Ящики (адреса) | см. `EMAIL_ADDRESSES` в `sites/mail/wrangler.jsonc` |
-| Домены аккаунта | goldeneramotors.site, redlinemotors.site, goldeneramotors.site, auto-master.site, helixworks.site |
+| Домены аккаунта | apex-motors.site, redlinemotors.site, goldeneramotors.site, auto-master.site, helixworks.site |
 | Cloudflare-аккаунт | `Mvillegas3423@gmail.com` (id `a4fa3f863e7c3b2d84588c221ba8a8d6`) |
 | Git-аккаунт | `mvillegas3423` (remote `origin`), прежний — remote `old` |
 | Токены | `sites/.secrets.alt.local` — **не коммитить, не выводить в лог** |
