@@ -98,7 +98,7 @@ const plate = ({ art, caption, index }) => `<svg width="${W}" height="${H}" xmln
 
   <rect width="${W}" height="${H}" fill="url(#vignette)"/>
   ${text(90, 92, `PL. ${String(index).padStart(2, '0')}`, { size: 22, ls: 5, anchor: 'start' })}
-  ${text(W - 90, 92, 'GOLDEN ERA MOTORS', { size: 22, ls: 5, anchor: 'end', opacity: 0.8 })}
+  ${text(W - 90, 92, 'AUTO ADVISORS OF AMERICA', { size: 22, ls: 5, anchor: 'end', opacity: 0.8 })}
   <line x1="90" y1="812" x2="${W - 90}" y2="812" stroke="${INK}" stroke-opacity="0.22" stroke-width="1.5"/>
   ${text(W / 2, 856, caption, { size: 25, ls: 8, fill: INK, opacity: 0.78 })}
 </svg>`;
@@ -346,7 +346,7 @@ const scenes = {
 
   /* ------------------------------------------------ about */
   'about-storefront': {
-    caption: 'THE SHOP · MICHIGAN AVENUE',
+    caption: 'THE SHOP · FEDORA CIRCLE',
     art: `
       <path d="M120 156 Q600 236 1080 156" fill="none" stroke="${INK}" stroke-width="3" stroke-opacity="0.5"/>
       ${[160, 260, 360, 460, 560, 660, 760, 860, 960, 1040]
@@ -358,8 +358,8 @@ const scenes = {
         .join('')}
       ${rect(180, 226, 840, 494, { fill: CREAM, sw: 5, rx: 4 })}
       <rect x="180" y="248" width="840" height="108" fill="${BURG}" stroke="${INK}" stroke-width="5"/>
-      ${text(600, 292, 'EST. 1978 · DETROIT, MICHIGAN', { size: 20, ls: 7, fill: CREAM, opacity: 0.85 })}
-      ${text(600, 336, 'GOLDEN ERA MOTORS', { size: 44, ls: 5, fill: CREAM })}
+      ${text(600, 292, 'EST. 1978 · BROOKSVILLE, FLORIDA', { size: 20, ls: 7, fill: CREAM, opacity: 0.85 })}
+      ${text(600, 336, 'AUTO ADVISORS OF AMERICA', { size: 38, ls: 4, fill: CREAM })}
       ${rect(150, 356, 900, 42, { fill: CHROME, sw: 4 })}
       ${scallops(150, 398, 900, 18, 22)}
       ${rect(226, 452, 348, 236, { fill: PAPER, sw: 4 })}
@@ -407,7 +407,7 @@ const scenes = {
 
   /* ------------------------------------------------ contacts */
   'contacts-map': {
-    caption: '3400 MICHIGAN AVENUE · DETROIT',
+    caption: '29211 FEDORA CIRCLE · BROOKSVILLE',
     art: `
       ${Array.from({ length: 7 }).map((_, i) => line(80, 200 + i * 90, 1120, 200 + i * 90, INK, 3, 0.12)).join('')}
       ${Array.from({ length: 9 }).map((_, i) => line(140 + i * 118, 150, 140 + i * 118, 780, INK, 3, 0.12)).join('')}

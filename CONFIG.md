@@ -1,7 +1,7 @@
 # av03 — Где что менять
 
 Единая точка правды по всем изменяемым значениям сайта. Бренд, контакты и домен
-централизованы — в коде нет захардкоженных «GOLDEN ERA MOTORS», телефонов или адресов.
+централизованы — в коде нет захардкоженных «AUTO ADVISORS OF AMERICA, LLC», телефонов или адресов.
 
 Тема сайта: **американская классика / винтаж**. Фон — бумага, акцент — бордо,
 типографика — узкий плакатный Bebas Neue + засечный Bitter.
@@ -15,16 +15,16 @@
 
 | Поле | Что меняет | Текущее значение |
 |---|---|---|
-| `name` | Полное имя бренда (заголовки, мета, юр. страницы) | `'GOLDEN ERA MOTORS'` |
-| `brandShort` | Первая часть wordmark в шапке/футере | `'GOLDEN ERA'` |
-| `brandTail` | Вторая часть wordmark | `'MOTORS'` |
-| `monogram` | Буква в лого | `'G'` |
+| `name` | Полное имя бренда (заголовки, мета, юр. страницы) | `'AUTO ADVISORS OF AMERICA, LLC'` |
+| `brandShort` | Первая часть wordmark в шапке/футере | `'AUTO ADVISORS'` |
+| `brandTail` | Вторая часть wordmark | `'OF AMERICA'` |
+| `monogram` | Буква в лого | `'A'` |
 | `tagline` | Слоган | `'American classics · Sales & restoration'` |
 | `description` | Дефолтное meta description | `'Classic American car sales, restoration and service…'` |
 | `phone` | Отображаемый номер | `'+1 (231) 371-0656'` |
 | `phoneHref` | Ссылка `tel:` (только цифры) | `'tel:+12313710656'` |
 | `email` | Email | `'info@goldeneramotors.site'` |
-| `address` | Адрес | `'3400 Michigan Avenue, Detroit, MI'` |
+| `address` | Адрес | `'29211 Fedora Circle, Brooksville, FL 34602'` |
 | `hours` | Часы работы | `'Mon–Sat · 9:00–18:00'` |
 | `url` | Домен (должен совпадать с `astro.config.mjs`) | `'https://goldeneramotors.site'` |
 | `established` | Год основания (в hero, CTA, About, OG) | `'1978'` |
@@ -128,7 +128,7 @@ site: 'https://goldeneramotors.site',
 pnpm scenes          # перерисовать все плашки
 ```
 
-Правки текста на плашках (подписи, «GOLDEN ERA MOTORS», «PL. NN») — в объекте `scenes`
+Правки текста на плашках (подписи, «AUTO ADVISORS OF AMERICA, LLC», «PL. NN») — в объекте `scenes`
 внутри `scripts/make-scenes.mjs`. Каждая сцена описана SVG-примитивами (`rect`, `line`,
 `carSil`, `wheel`, `dots`) в координатах холста 1200×900.
 
@@ -143,9 +143,9 @@ pnpm scenes          # перерисовать все плашки
 | Файл | Что менять |
 |---|---|
 | `public/favicon.svg` | рамка + монограмма «G» |
-| `scripts/make-og.mjs` | текст «GOLDEN ERA MOTORS», «EST. 1978 · DETROIT, MICHIGAN», `goldeneramotors.site` |
+| `scripts/make-og.mjs` | текст «AUTO ADVISORS OF AMERICA, LLC», «EST. 1978 · BROOKSVILLE, FLORIDA», `goldeneramotors.site` |
 | `scripts/make-hero.mjs` | фон-заглушка героя: «1978», город, слоган |
-| `scripts/make-scenes.mjs` | подписи и «GOLDEN ERA MOTORS» на плашках |
+| `scripts/make-scenes.mjs` | подписи и «AUTO ADVISORS OF AMERICA, LLC» на плашках |
 | `public/hero.jpg` | заглушка героя и фон галереи на главной |
 | `public/og.jpg` | превью для соцсетей |
 
@@ -185,7 +185,7 @@ grep -rn 'href="/[a-z-]*[a-z]"' src/    # не должно ничего нах�
 2. `astro.config.mjs` — site (если меняется домен) + `public/robots.txt`
 3. `public/favicon.svg` — монограмма
 4. `scripts/make-hero.mjs`, `scripts/make-scenes.mjs`, `scripts/make-og.mjs` — текст → `pnpm hero && pnpm scenes && pnpm og`
-5. `src/pages/terms.astro` — штат/округ в разделе «Governing Law and Venue» (сейчас Michigan / Wayne County)
+5. `src/pages/terms.astro` — штат/округ в разделе «Governing Law and Venue» (сейчас Florida / Hernando County)
 6. `src/data/cars.ts` — если меняется инвентарь
 7. `pnpm build` → `git push` (Cloudflare деплоит сам)
 

@@ -37,7 +37,7 @@ const svg = `<svg width="${W}" height="${H}" xmlns="http://www.w3.org/2000/svg">
   <rect x="70" y="70" width="${W - 140}" height="${H - 140}" fill="none" stroke="#231a14" stroke-opacity="0.22" stroke-width="3"/>
   <rect x="84" y="84" width="${W - 168}" height="${H - 168}" fill="none" stroke="#7a2b2b" stroke-opacity="0.35" stroke-width="1"/>
 
-  <text x="${W / 2}" y="150" font-family="Georgia, 'Times New Roman', serif" font-size="22" letter-spacing="12" fill="#6b5b4b" text-anchor="middle">DETROIT · MICHIGAN</text>
+  <text x="${W / 2}" y="150" font-family="Georgia, 'Times New Roman', serif" font-size="22" letter-spacing="12" fill="#6b5b4b" text-anchor="middle">BROOKSVILLE · FLORIDA</text>
   <text x="${W / 2}" y="${H - 130}" font-family="Georgia, 'Times New Roman', serif" font-size="22" letter-spacing="12" fill="#6b5b4b" text-anchor="middle">AMERICAN CLASSICS · SALES &amp; RESTORATION</text>
 </svg>`;
 

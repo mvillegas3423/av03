@@ -1,6 +1,6 @@
 # Почта на Cloudflare — развёртывание и настройка
 
-Документ для этого проекта (av03 · GOLDEN ERA MOTORS · **goldeneramotors.site**).
+Документ для этого проекта (av03 · AUTO ADVISORS OF AMERICA, LLC · **goldeneramotors.site**).
 Читая его, ты должен понять, как устроена почта проекта, что уже сделано и что делать дальше.
 Актуально для всех пяти сайтов портфеля — отличается только домен и бренд.
 
@@ -82,7 +82,7 @@ Cloudflare сам создаст DNS-запись. Через API это тре�
 
 ### Шаг 4. Создать ящики
 Открыть `mail.helixworks.site` (или технический адрес), войти по email-коду, создать ящик
-`info@goldeneramotors.site`. В настройках ящика задать отображаемое имя (например `GOLDEN ERA MOTORS`) и подпись.
+`info@goldeneramotors.site`. В настройках ящика задать отображаемое имя (например `AUTO ADVISORS OF AMERICA, LLC`) и подпись.
 
 ### Шаг 5. Включить отправку
 `Compute → Email Service → Email Sending → Onboard Domain` → выбрать `goldeneramotors.site`.

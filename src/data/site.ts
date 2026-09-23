@@ -1,16 +1,16 @@
 export const site = {
-  name: 'GOLDEN ERA MOTORS',
+  name: 'AUTO ADVISORS OF AMERICA, LLC',
   // wordmark / logo pieces (used in the nav + footer wordmark)
-  brandShort: 'GOLDEN ERA',
-  brandTail: 'MOTORS',
-  monogram: 'G',
+  brandShort: 'AUTO ADVISORS',
+  brandTail: 'OF AMERICA',
+  monogram: 'A',
   tagline: 'American classics · Sales & restoration',
   description:
     'Classic American car sales, restoration and service. Hand-picked vintage vehicles with documented history and concours-level workmanship.',
   phone: '+1 (231) 371-0656',
   phoneHref: 'tel:+12313710656',
   email: 'info@goldeneramotors.site',
-  address: '3400 Michigan Avenue, Detroit, MI',
+  address: '29211 Fedora Circle, Brooksville, FL 34602',
   hours: 'Mon–Sat · 9:00–18:00',
   url: 'https://goldeneramotors.site',
   established: '1978',

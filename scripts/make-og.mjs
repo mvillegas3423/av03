@@ -45,9 +45,9 @@ const posterSvg = `<svg width="${W}" height="${H}" xmlns="http://www.w3.org/2000
   <rect x="14" y="0" width="${W - 14}" height="${H}" fill="url(#hatch)"/>
   <rect x="0" y="0" width="14" height="${H}" fill="#7a2b2b"/>
   <rect x="58" y="58" width="${W - 116}" height="${H - 116}" fill="none" stroke="#231a14" stroke-opacity="0.3" stroke-width="2"/>
-  <text x="92" y="146" font-family="Georgia, 'Times New Roman', serif" font-size="19" letter-spacing="7" fill="#7a2b2b">EST. 1978 · DETROIT, MICHIGAN</text>
-  <text x="92" y="252" font-family="Georgia, 'Times New Roman', serif" font-size="72" letter-spacing="2" fill="#231a14">GOLDEN ERA</text>
-  <text x="92" y="326" font-family="Georgia, 'Times New Roman', serif" font-size="72" letter-spacing="2" fill="#231a14">MOTORS</text>
+  <text x="92" y="146" font-family="Georgia, 'Times New Roman', serif" font-size="19" letter-spacing="7" fill="#7a2b2b">EST. 1978 · BROOKSVILLE, FLORIDA</text>
+  <text x="92" y="252" font-family="Georgia, 'Times New Roman', serif" font-size="72" letter-spacing="2" fill="#231a14">AUTO ADVISORS</text>
+  <text x="92" y="326" font-family="Georgia, 'Times New Roman', serif" font-size="72" letter-spacing="2" fill="#231a14">OF AMERICA, LLC</text>
   <rect x="92" y="362" width="104" height="4" fill="#7a2b2b"/>
   <text x="92" y="420" font-family="Georgia, 'Times New Roman', serif" font-size="23" fill="#6b5b4b">American classics — sales, restoration</text>
   <text x="92" y="454" font-family="Georgia, 'Times New Roman', serif" font-size="23" fill="#6b5b4b">&amp; service</text>
@@ -72,12 +72,12 @@ const photoSvg = `<svg width="${W}" height="${H}" xmlns="http://www.w3.org/2000/
   <rect width="${W}" height="${H}" fill="url(#scrim)"/>
   <rect x="30" y="30" width="${W - 60}" height="${H - BAND - 60}" fill="none" stroke="#faf5ec" stroke-opacity="0.45" stroke-width="2"/>
 
-  <rect x="46" y="46" width="392" height="46" fill="#faf5ec" fill-opacity="0.95"/>
-  <text x="64" y="76" font-family="Georgia, 'Times New Roman', serif" font-size="17" letter-spacing="4.6" fill="#7a2b2b">EST. 1978 · DETROIT, MICHIGAN</text>
+  <rect x="46" y="46" width="516" height="46" fill="#faf5ec" fill-opacity="0.95"/>
+  <text x="64" y="76" font-family="Georgia, 'Times New Roman', serif" font-size="17" letter-spacing="4.6" fill="#7a2b2b">EST. 1978 · BROOKSVILLE, FLORIDA</text>
 
   <rect x="0" y="${H - BAND}" width="${W}" height="${BAND}" fill="#7a2b2b" fill-opacity="0.96"/>
   <rect x="0" y="${H - BAND}" width="${W}" height="3" fill="#faf5ec" fill-opacity="0.5"/>
-  <text x="72" y="${H - BAND + 54}" font-family="Georgia, 'Times New Roman', serif" font-size="38" letter-spacing="5" fill="#faf5ec">GOLDEN ERA MOTORS</text>
+  <text x="72" y="${H - BAND + 54}" font-family="Georgia, 'Times New Roman', serif" font-size="38" letter-spacing="5" fill="#faf5ec">AUTO ADVISORS OF AMERICA</text>
   <text x="72" y="${H - BAND + 92}" font-family="Georgia, 'Times New Roman', serif" font-size="21" fill="#faf5ec" fill-opacity="0.85">American classics — sales, restoration &amp; service</text>
   <text x="${W - 72}" y="${H - BAND + 54}" font-family="Georgia, 'Times New Roman', serif" font-size="19" letter-spacing="3" fill="#faf5ec" fill-opacity="0.92" text-anchor="end">goldeneramotors.site</text>
   ${stock ? `<text x="${W - 72}" y="${H - BAND + 88}" font-family="Georgia, 'Times New Roman', serif" font-size="19" letter-spacing="3" fill="#faf5ec" fill-opacity="0.7" text-anchor="end">${stock}</text>` : ''}

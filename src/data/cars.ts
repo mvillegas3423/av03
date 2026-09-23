@@ -35,7 +35,7 @@ export interface Car {
   description: string;
 }
 
-// Inventory for GOLDEN ERA MOTORS — add vehicles here (see CONFIG.md).
+// Inventory for AUTO ADVISORS OF AMERICA, LLC — add vehicles here (see CONFIG.md).
 export const cars: Car[] = [
   {
     slug: 'pontiac-gto-1965',

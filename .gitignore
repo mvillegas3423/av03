@@ -21,3 +21,8 @@ public/cars/*.gif
 public/cars/_raw/
 # inbox for raw photos dropped by hand
 img/
+
+# Lighthouse / audit artifacts
+lh-*.json
+lh-*.log
+.lighthouse/
