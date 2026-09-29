@@ -13,7 +13,7 @@ export const site = {
   address: '29211 Fedora Circle, Brooksville, FL 34602',
   hours: 'Mon–Sat · 9:00–18:00',
   url: 'https://goldeneramotors.site',
-  established: '1978',
+  established: '2024',
 } as const;
 
 export interface NavItem {
@@ -124,9 +124,12 @@ export const testimonials: Testimonial[] = [
   },
 ];
 
+// The company was established in 2024, so these tiles may not claim a long trading history,
+// lifetime sales volumes or awards. Each figure is the founding year, a count taken from this
+// site's own content (cars on the floor, services offered) or a warranty the site already states.
 export const stats = [
-  { value: '1978', label: 'Established' },
-  { value: '1,200+', label: 'Classics sold' },
-  { value: '38', label: 'Concours awards' },
+  { value: '2024', label: 'Established' },
+  { value: '10', label: 'Cars on the floor' },
+  { value: '6', label: 'Disciplines in house' },
   { value: '12 mo', label: 'Restoration warranty' },
 ] as const;

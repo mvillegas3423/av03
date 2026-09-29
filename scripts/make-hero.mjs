@@ -32,7 +32,7 @@ const svg = `<svg width="${W}" height="${H}" xmlns="http://www.w3.org/2000/svg">
   <rect width="${W}" height="${H}" fill="url(#warm)"/>
   <rect width="${W}" height="${H}" fill="url(#hatch)"/>
 
-  <text x="${W / 2}" y="${H / 2 + 90}" font-family="Georgia, 'Times New Roman', serif" font-size="300" letter-spacing="26" fill="#231a14" fill-opacity="0.07" text-anchor="middle">1978</text>
+  <text x="${W / 2}" y="${H / 2 + 90}" font-family="Georgia, 'Times New Roman', serif" font-size="300" letter-spacing="26" fill="#231a14" fill-opacity="0.07" text-anchor="middle">2024</text>
 
   <rect x="70" y="70" width="${W - 140}" height="${H - 140}" fill="none" stroke="#231a14" stroke-opacity="0.22" stroke-width="3"/>
   <rect x="84" y="84" width="${W - 168}" height="${H - 168}" fill="none" stroke="#7a2b2b" stroke-opacity="0.35" stroke-width="1"/>

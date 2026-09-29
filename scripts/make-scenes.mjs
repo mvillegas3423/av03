@@ -203,7 +203,7 @@ const scenes = {
       <circle cx="433" cy="462" r="34" fill="${CHROME}" stroke="${INK}" stroke-width="4"/>
       <circle cx="767" cy="462" r="34" fill="${CHROME}" stroke="${INK}" stroke-width="4"/>
       ${rect(536, 606, 128, 74, { fill: CREAM, sw: 3.5, rx: 4 })}
-      ${text(600, 654, '1978', { size: 30, ls: 2, fill: MUTED, opacity: 0.9 })}
+      ${text(600, 654, '2024', { size: 30, ls: 2, fill: MUTED, opacity: 0.9 })}
       ${line(120, 700, 1080, 700, INK, 3, 0.25)}
     `,
   },
@@ -250,7 +250,7 @@ const scenes = {
       <circle cx="806" cy="656" r="96" fill="none" stroke="${BURG}" stroke-width="7" stroke-opacity="0.85"/>
       <circle cx="806" cy="656" r="76" fill="none" stroke="${BURG}" stroke-width="3" stroke-opacity="0.7"/>
       ${text(806, 648, 'APPRAISED', { size: 22, ls: 2, fill: BURG, opacity: 0.9 })}
-      ${text(806, 682, 'PL. 1978', { size: 18, ls: 3, fill: BURG, opacity: 0.7 })}
+      ${text(806, 682, '2024', { size: 18, ls: 3, fill: BURG, opacity: 0.7 })}
       ${line(120, 806, 1080, 806, INK, 3, 0.2)}
     `,
   },
@@ -358,7 +358,7 @@ const scenes = {
         .join('')}
       ${rect(180, 226, 840, 494, { fill: CREAM, sw: 5, rx: 4 })}
       <rect x="180" y="248" width="840" height="108" fill="${BURG}" stroke="${INK}" stroke-width="5"/>
-      ${text(600, 292, 'EST. 1978 · BROOKSVILLE, FLORIDA', { size: 20, ls: 7, fill: CREAM, opacity: 0.85 })}
+      ${text(600, 292, 'EST. 2024 · BROOKSVILLE, FLORIDA', { size: 20, ls: 7, fill: CREAM, opacity: 0.85 })}
       ${text(600, 336, 'AUTO ADVISORS OF AMERICA', { size: 38, ls: 4, fill: CREAM })}
       ${rect(150, 356, 900, 42, { fill: CHROME, sw: 4 })}
       ${scallops(150, 398, 900, 18, 22)}

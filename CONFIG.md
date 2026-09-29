@@ -27,7 +27,7 @@
 | `address` | Адрес | `'29211 Fedora Circle, Brooksville, FL 34602'` |
 | `hours` | Часы работы | `'Mon–Sat · 9:00–18:00'` |
 | `url` | Домен (должен совпадать с `astro.config.mjs`) | `'https://goldeneramotors.site'` |
-| `established` | Год основания (в hero, CTA, About, OG) | `'1978'` |
+| `established` | Год основания (в hero, CTA, About, OG) | `'2024'` |
 
 Ниже в этом же файле: `nav`, `services` (6 позиций с ценами), `testimonials`, `stats`.
 
@@ -143,8 +143,8 @@ pnpm scenes          # перерисовать все плашки
 | Файл | Что менять |
 |---|---|
 | `public/favicon.svg` | рамка + монограмма «G» |
-| `scripts/make-og.mjs` | текст «AUTO ADVISORS OF AMERICA, LLC», «EST. 1978 · BROOKSVILLE, FLORIDA», `goldeneramotors.site` |
-| `scripts/make-hero.mjs` | фон-заглушка героя: «1978», город, слоган |
+| `scripts/make-og.mjs` | текст «AUTO ADVISORS OF AMERICA, LLC», «EST. 2024 · BROOKSVILLE, FLORIDA», `goldeneramotors.site` |
+| `scripts/make-hero.mjs` | фон-заглушка героя: «2024», город, слоган |
 | `scripts/make-scenes.mjs` | подписи и «AUTO ADVISORS OF AMERICA, LLC» на плашках |
 | `public/hero.jpg` | заглушка героя и фон галереи на главной |
 | `public/og.jpg` | превью для соцсетей |

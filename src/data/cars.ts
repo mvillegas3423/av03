@@ -224,7 +224,7 @@ export const cars: Car[] = [
     year: 1972,
     price: 66900,
     body: 'Muscle Car',
-    engine: '530 cu in V8, bored from 454 (8.7L)',
+    engine: '530 cu in V8, built on a 454 block (8.7L)',
     mileage: 70559,
     transmission: '3-Speed Automatic (350TH)',
     drive: 'Rear-Wheel Drive',
@@ -238,7 +238,7 @@ export const cars: Car[] = [
     featured: true,
     hero: true,
     features: [
-      'Rebuilt and bored 530 cu in V8, originally a 454',
+      'Rebuilt 530 cu in V8, built on a 454 block',
       'Mahle pistons and Dart cylinder heads',
       'Comp cam with FiTech electronic fuel injection',
       '670 hp and 480 lb-ft of torque',
@@ -256,7 +256,7 @@ export const cars: Car[] = [
       'House of Kolor Majestic Blue paint',
     ],
     description:
-      'This 1972 Chevrolet Chevelle SS Restomod masterfully blends classic muscle car aesthetics with modern performance and comfort, having undergone a comprehensive transformation. Powering this standout performer is a rebuilt and bored 530ci V8 engine, originally a 454ci, now enhanced with Mahle pistons, Dart heads, a Comp cam, electric cooling fans, and a FiTech electronic fuel injection system, generating an exhilarating 670 horsepower and 480 pound-feet of torque. This potent engine is paired with a robust 350TH automatic transmission featuring a 3000 stall converter and a 4.11 rear end for exceptional acceleration. The ride is both thrilling and smooth, thanks to a full Ride Tech suspension system with muscle bars, strong arms, and adjustable height coilover shocks, while Wilwood disc brakes on both front and rear ensure superior stopping power. Its aggressive yet sophisticated exterior is finished in a fresh coat of House of Kolor\u2019s Majestic Blue, complemented by custom Savani wheels, measuring 22 inches in the rear and 20 inches in the front. Inside, the Chevelle maintains a classic appearance while offering modern conveniences, including a Dakota Digital dashboard, blue LED interior lighting, custom power-adjustable front seats, power windows, and power locks. An upgraded Kenwood KDC-X996 audio system with a 12-inch subwoofer provides a powerful soundtrack for every journey. This Chevelle SS Restomod is a true testament to expert craftsmanship and the harmonious integration of automotive heritage with contemporary technology.',
+      'This 1972 Chevrolet Chevelle SS Restomod masterfully blends classic muscle car aesthetics with modern performance and comfort, having undergone a comprehensive transformation. Powering this standout performer is a rebuilt 530ci V8 engine built on a 454ci block, now enhanced with Mahle pistons, Dart heads, a Comp cam, electric cooling fans, and a FiTech electronic fuel injection system, generating an exhilarating 670 horsepower and 480 pound-feet of torque. This potent engine is paired with a robust 350TH automatic transmission featuring a 3000 stall converter and a 4.11 rear end for exceptional acceleration. The ride is both thrilling and smooth, thanks to a full Ride Tech suspension system with muscle bars, strong arms, and adjustable height coilover shocks, while Wilwood disc brakes on both front and rear ensure superior stopping power. Its aggressive yet sophisticated exterior is finished in a fresh coat of House of Kolor\u2019s Majestic Blue, complemented by custom Savani wheels, measuring 22 inches in the rear and 20 inches in the front. Inside, the Chevelle maintains a classic appearance while offering modern conveniences, including a Dakota Digital dashboard, blue LED interior lighting, custom power-adjustable front seats, power windows, and power locks. An upgraded Kenwood KDC-X996 audio system with a 12-inch subwoofer provides a powerful soundtrack for every journey. This Chevelle SS Restomod is a true testament to expert craftsmanship and the harmonious integration of automotive heritage with contemporary technology.',
   },
   {
     slug: 'chevrolet-bel-air-1957',
